@@ -22,8 +22,6 @@ public class Main {
         ViewPeliculas view_peliculas = new ViewPeliculas();
         ControllerPeliculas controller_peliculas = new ControllerPeliculas(model_peliculas,view_peliculas);
         
-        
-        
         //ModelMain model_main = new ModelMain();
         ViewMain view_main = new ViewMain();
         Object views[] = new Object[3];
