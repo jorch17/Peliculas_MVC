@@ -22,11 +22,11 @@ public class ControllerClientes {
     }
     
     public void getValores(){
-        view_clientes.jtf_id_cliente.setText("" + model_clientes.getId_cliente());
-        view_clientes.jtf_nombre.setText("" + model_clientes.getNombre());
-        view_clientes.jtf_telefono.setText("" + model_clientes.getTelefono());
-        view_clientes.jtf_email.setText("" + model_clientes.getEmail());
-        view_clientes.jtf_direccion.setText("" + model_clientes.getDireccion());
+        view_clientes.jtf_id_cliente.setText(""+model_clientes.getId_cliente());
+        view_clientes.jtf_nombre.setText(""+model_clientes.getNombre());
+        view_clientes.jtf_telefono.setText(""+model_clientes.getTelefono());
+        view_clientes.jtf_email.setText(""+model_clientes.getEmail());
+        view_clientes.jtf_direccion.setText(""+model_clientes.getDireccion());
     }
     
     public void setValores(){
@@ -58,9 +58,9 @@ public class ControllerClientes {
     }//boton mover siguiente
     
     public void jbtn_nuevo_click(){
-        view_clientes.jtf_id_cliente.setEditable(false);
-        int id = Integer.parseInt(view_clientes.jtf_id_cliente.getText());
-        id += 1;
+        //view_clientes.jtf_id_cliente.setEditable(false);
+        //int id = Integer.parseInt(view_clientes.jtf_id_cliente.getText());
+        //id += 1;
         view_clientes.jtf_id_cliente.setText(" ");
         view_clientes.jtf_nombre.setText(" ");
         view_clientes.jtf_telefono.setText(" ");

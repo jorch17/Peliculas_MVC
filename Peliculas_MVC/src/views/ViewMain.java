@@ -31,6 +31,7 @@ public class ViewMain extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jmi_clientes = new javax.swing.JMenuItem();
         jmi_peliculas = new javax.swing.JMenuItem();
+        jmi_renta = new javax.swing.JMenuItem();
         jmi_salir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,6 +44,9 @@ public class ViewMain extends javax.swing.JFrame {
 
         jmi_peliculas.setText("Peliculas");
         jMenu1.add(jmi_peliculas);
+
+        jmi_renta.setText("Renta");
+        jMenu1.add(jmi_renta);
 
         jmi_salir.setText("Salir");
         jMenu1.add(jmi_salir);
@@ -105,6 +109,7 @@ public class ViewMain extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JMenuItem jmi_clientes;
     public javax.swing.JMenuItem jmi_peliculas;
+    public javax.swing.JMenuItem jmi_renta;
     public javax.swing.JMenuItem jmi_salir;
     // End of variables declaration//GEN-END:variables
 }
