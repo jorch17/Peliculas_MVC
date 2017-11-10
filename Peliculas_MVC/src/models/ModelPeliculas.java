@@ -140,8 +140,8 @@ public class ModelPeliculas {
         }
     }// seleccionar todo
     
-    public void insertar(String nombre,String formato,String duracion,String descripcion){
-        try{seleccionarTodo();
+    public void insertar(/*String nombre,String formato,String duracion,String descripcion*/){
+        try{
             sql="INSERT into peliculas(nombre,formato,duracion,descripcion) values(?,?,?,?);";
             ps=conexion.prepareStatement(sql);
             ps.setString(1,nombre);
@@ -157,7 +157,7 @@ public class ModelPeliculas {
         }
     }// insertando datos
     
-    public void eliminar(int id_cliente){
+    public void eliminar(/*int id_cliente*/){
         try{
             sql="DELETE FROM peliculas WHERE id_pelicula= ?;";
             ps=conexion.prepareStatement(sql);
@@ -171,7 +171,7 @@ public class ModelPeliculas {
         }
     }//borrar datos
     
-    public void actualizar(String nombre,String formato,String duracion,String descripcion,int id_pelicula){
+    public void actualizar(/*String nombre,String formato,String duracion,String descripcion,int id_pelicula*/){
         try{
             sql="UPDATE peliculas SET nombre=?,formato=?, duracion=?, descripcion=? WHERE id_pelicula=?;";
             ps=conexion.prepareStatement(sql);

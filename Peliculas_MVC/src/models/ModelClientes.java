@@ -139,8 +139,8 @@ public class ModelClientes {
         }
     }// seleccionar todo
     
-    public void insertar(String nombre,String telefono,String email,String direccion){
-        try{seleccionarTodo();
+    public void insertar(/*String nombre,String telefono,String email,String direccion*/){
+        try{
             sql="INSERT into clientes(nombre,telefono,email,direccion) values(?,?,?,?);";
             ps=conexion.prepareStatement(sql);
             ps.setString(1,nombre);
@@ -156,7 +156,7 @@ public class ModelClientes {
         }
     }// insertando datos
     
-    public void eliminar(int id_cliente){
+    public void eliminar(/*int id_cliente*/){
         try{
             sql="DELETE FROM clientes WHERE id_cliente= ?;";
             ps=conexion.prepareStatement(sql);
@@ -170,7 +170,7 @@ public class ModelClientes {
         }
     }//borrar datos
     
-    public void actualizar(String nombre,String telefono,String email,String direccion,int id_cliente){
+    public void actualizar(/*String nombre,String telefono,String email,String direccion,int id_cliente*/){
         try{
             sql="UPDATE clientes SET nombre=?,telefono=?, email=?, direccion=? WHERE id_cliente=?;";
             ps=conexion.prepareStatement(sql);

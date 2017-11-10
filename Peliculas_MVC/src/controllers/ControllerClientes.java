@@ -30,11 +30,15 @@ public class ControllerClientes {
     }
     
     public void setValores(){
-        model_clientes.setId_cliente(Integer.parseInt(view_clientes.jtf_id_cliente.getText()));
+        
+        System.out.print(model_clientes);
         model_clientes.setNombre(view_clientes.jtf_nombre.getText());
         model_clientes.setTelefono(view_clientes.jtf_telefono.getText());
         model_clientes.setEmail(view_clientes.jtf_email.getText());
         model_clientes.setDireccion(view_clientes.jtf_direccion.getText());
+        if(!view_clientes.jtf_id_cliente.getText().equals(" ")){
+            model_clientes.setId_cliente(Integer.parseInt(view_clientes.jtf_id_cliente.getText()));
+        }    
     }
     
     public void jbtn_moverPrimero_click(){
@@ -70,19 +74,21 @@ public class ControllerClientes {
     
     public void jbtn_insertar_click(){
         setValores();
-        model_clientes.insertar(model_clientes.getNombre(),model_clientes.getTelefono(),model_clientes.getEmail(),model_clientes.getDireccion());
+        model_clientes.insertar(/*view_clientes.jtf_nombre.getText(),model_clientes.getTelefono(),model_clientes.getEmail(),model_clientes.getDireccion()*/);
+        model_clientes.llenarValores();
         getValores();
+        
     }// boton insertar
     
     public void jbtn_actualizar_click(){
         setValores();
-        model_clientes.actualizar(model_clientes.getNombre(),model_clientes.getTelefono(),model_clientes.getEmail(),model_clientes.getDireccion(),model_clientes.getId_cliente());
+        model_clientes.actualizar(/*model_clientes.getNombre(),model_clientes.getTelefono(),model_clientes.getEmail(),model_clientes.getDireccion(),model_clientes.getId_cliente()*/);
         getValores();
     }//boton actualizar
     
     public void jbtn_eliminar_click(){
         setValores();
-        model_clientes.eliminar(model_clientes.getId_cliente());
+        model_clientes.eliminar(/*model_clientes.getId_cliente()*/);
         getValores();
     }//boton borrar
     
